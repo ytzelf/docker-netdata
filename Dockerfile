@@ -7,7 +7,7 @@ RUN apt-get update \
     && apt-get --assume-yes install libipmimonitoring-dev wget \
     && wget https://my-netdata.io/kickstart.sh \
     && chmod u+x kickstart.sh \
-    && ./kickstart.sh --dont-wait --disable-telemetry --no-updates
+    && ./kickstart.sh --dont-wait --disable-telemetry
 
 ADD run.sh /etc/my_init.d/
 RUN chmod +x /etc/my_init.d/run.sh
